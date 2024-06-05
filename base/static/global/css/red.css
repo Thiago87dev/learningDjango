@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #1d72cd;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+html {
+    font-size: 62.5%;
+  }
+
+body {
+    font-size: 1.6rem;
+    background-color: rgb(239, 136, 136);
+}
+
+.content {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.post {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 40%);
+}
+
+.menu {
+    background-color: #000;
+    padding: 1.5rem;
+}
+
+.menu_links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu_links a {
+   color: #fff; 
+}
+
+@media(min-width: 600px){
+    .content:not(:has(.single-post)){
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    }
+}
